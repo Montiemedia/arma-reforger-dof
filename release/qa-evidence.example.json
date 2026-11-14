@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "reforger_version": "",
+  "workbench_version": "",
+  "scenario_name": "DOF Arland Alpha",
+  "checks": {
+    "workbench_compile": {"passed": false, "evidence": ""},
+    "local_play": {"passed": false, "evidence": ""},
+    "listen_server": {"passed": false, "evidence": ""},
+    "dedicated_server": {"passed": false, "evidence": ""},
+    "bundle": {"passed": false, "evidence": ""}
+  }
+}
