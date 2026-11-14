@@ -3,7 +3,8 @@
 ## Phase 0: Voraussetzungen (offen)
 
 - [ ] Installierte Reforger-Version und Enfusion-Workbench-Version dokumentieren
-- [ ] Game-Master-Spielmodus und Scenario-Framework-Bausteine im Projekt prüfen
+- [x] Öffentliche Dokumentation der Game-Mode- und Scenario-Framework-Bausteine ausgewertet (siehe `API_VALIDIERUNG.md`)
+- [ ] Game-Master-Spielmodus und Scenario-Framework-Bausteine in der **installierten** Workbench prüfen
 - [ ] Referenzkarte, Vanilla-Fraktionen und Server-Testumgebungen festlegen
 - [ ] Verwendete Engine-Klassen und Callback-Signaturen anhand installierter Skriptquellen verifizieren
 
@@ -13,7 +14,8 @@
 - [ ] Ein funktionierender Spawn-/Bereitstellungsbereich
 - [ ] Auftragskette Annähern -> Sichern/Säubern -> Verteidigen
 - [ ] Erfolg, Fehlschlag und Abbruch validieren
-- [ ] Reproduzierbare lokale Testanleitung dokumentieren
+- [x] Anleitung für den Workbench-Aufbau dokumentiert (`WORKBENCH_SZENARIO_0_1.md`)
+- [ ] Schritte tatsächlich in Workbench durchführen und protokollieren
 
 **Abnahme:** Alle Phasen sind spielbar; keine Doppelaktivierung; sauberer Abschluss. Erst nach Workbench-Test als spielbar bezeichnen.
 
