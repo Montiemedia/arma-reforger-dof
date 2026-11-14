@@ -37,6 +37,10 @@ DOF ist ein geplantes modulares Framework für dynamische, serverautoritär verw
 
 Siehe [Entwicklungsplan](docs/IMPLEMENTIERUNGSPLAN.md), [Architektur](docs/ARCHITEKTUR.md), [API-Verifikation](docs/API_VALIDIERUNG.md), [Workbench-Anleitung für DOF 0.1](docs/WORKBENCH_SZENARIO_0_1.md) und [Testplan](docs/TESTPLAN.md).
 
+## Referenzmission (noch nicht spielbar)
+
+Der erste Einsatz ist als [deklaratives Design-Manifest](scenarios/reference_arland/mission.json) mit den Phasen Annäherung, Säuberung und Verteidigung definiert. Das Manifest ist **kein Enfusion-Ressourcenformat**. Es wird über einen [Python-Preflight](docs/MISSIONSFORMAT.md) und GitHub Actions formal geprüft und muss anschließend manuell in Enfusion Workbench als echte Szenariowelt umgesetzt und getestet werden.
+
 ## Entwicklung und Test
 
 Die Workbench-Projektdateien, Prefabs und Szenario-Welt müssen mit der tatsächlich installierten Arma-Reforger-Tools-Version angelegt und validiert werden. Keine `.ent`- oder `.conf`-Datei wird als funktionsfähig ausgegeben, solange sie nicht in dieser Umgebung erzeugt und geladen wurde.
