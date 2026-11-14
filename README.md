@@ -56,6 +56,14 @@ Es liegen **800 fiktionale Koop-Missionsentwürfe** vor: 200 je US, USSR, FIA un
 
 Der [Umfang, die Grenzen und die Validierung](docs/MISSIONSBIBLIOTHEK.md) sind dokumentiert. **Keiner der 800 Story-Datensätze besitzt eine fertige Engine-Bridge oder garantierte Spielbarkeit.**
 
+## Mod-Veröffentlichung: Was ist zum Spielen noch nötig?
+
+**Noch kein installierbarer Reforger-Mod vorhanden.** Die 800 Missionen sind narrative JSON-Entwürfe, und der Enforce-Kern ist nicht in Workbench kompiliert. Native `.gproj`-, `.ent`- und Mission-Header-Ressourcen wurden bisher nicht erzeugt.
+
+Die genaue Anleitung für eine **spielbare Vanilla-Alpha** mit Workbench-Schritten, Tests, Workshop-Publishing und Release-Freigabe befindet sich unter [MOD_ALPHABUILD.md](docs/MOD_ALPHABUILD.md). Der vorgesehene Workbench-Projektordner ist `addon/DOF_DynamicOperations/`.
+
+Die lokale Freigabeprüfung kann mit `python3 tools/check_mod_release.py --stage local-alpha` ausgeführt werden. Solange Engine-Ressourcen und Prüfnachweise fehlen, gibt sie absichtlich **NICHT BEREIT** zurück.
+
 ## Entwicklung und Test
 
 Die Workbench-Projektdateien, Prefabs und Szenario-Welt müssen mit der tatsächlich installierten Arma-Reforger-Tools-Version angelegt und validiert werden. Keine `.ent`- oder `.conf`-Datei wird als funktionsfähig ausgegeben, solange sie nicht in dieser Umgebung erzeugt und geladen wurde.
