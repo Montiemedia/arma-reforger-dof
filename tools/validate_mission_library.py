@@ -44,7 +44,7 @@ def load_seeds(path: Path):
             problems.append(f"{path}:{line_number}: expected eight nonblank fields")
             continue
         plots.append({"category": group, "title": cols[0], "incident": cols[1],
-                      "objective": cols[2], "reveal": cols[3], "type": cols[7]})
+                      "objective": cols[2], "reveal": cols[3], "choice_a": cols[4], "choice_b": cols[5], "type": cols[7]})
     if len(plots) != 200:
         problems.append(f"story seeds: expected 200, found {len(plots)}")
     if len(set(p["title"] for p in plots)) != len(plots):
@@ -120,7 +120,10 @@ def validate_catalog(document, faction, plots):
         if m.get("mission_type") not in TYPES:
             errors.append(f"{label}: unknown mission type")
         story = m.get("story")
-        if not isinstance(story, dict) or any(not text(story.get(k), 20) for k in STORY_KEYS):
+        if not isinstance(story, dict) or any(
+            not text(story.get(k), 8 if k == "human_stakes" else 20)
+            for k in STORY_KEYS
+        ):
             errors.append(f"{label}: incomplete story or epilogue")
         chars = m.get("characters")
         if not isinstance(chars, list) or len(chars) < 2:
@@ -142,8 +145,16 @@ def validate_catalog(document, faction, plots):
             for c in choices
         ):
             errors.append(f"{label}: two complete decision branches required")
-        elif choices[0]["action"] == choices[1]["action"]:
-            errors.append(f"{label}: choice actions must differ")
+        else:
+            if choices[0]["action"] == choices[1]["action"]:
+                errors.append(f"{label}: choice actions must differ")
+            if index < len(plots) and (
+                choices[0]["action"] != plots[index]["choice_a"]
+                or choices[1]["action"] != plots[index]["choice_b"]
+            ):
+                errors.append(f"{label}: choice actions do not match source story")
+            if any("undefined" in c["consequence"].lower() for c in choices):
+                errors.append(f"{label}: undefined placeholder in choice consequences")
 
         events = m.get("dynamic_events")
         if not isinstance(events, list) or len(events) < 2 or not all(isinstance(e, dict) and text(e.get("event")) and text(e.get("trigger")) for e in events):
