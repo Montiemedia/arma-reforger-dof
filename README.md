@@ -45,6 +45,17 @@ Der erste Einsatz ist als [deklaratives Design-Manifest](scenarios/reference_arl
 
 Unter `Scripts/Game/DOF/Core/` liegt jetzt ein **noch nicht in Workbench kompilierter** Enforce-Kandidat für den eigenständigen Auftragslebenszyklus. Ein separates Python-Referenzmodell prüft die geplante Ablaufpolitik und simuliert die drei Aufträge der Referenzmission. **Diese Tests sind kein Nachweis für Reforger-Kompatibilität.** Details: [Auftragskern und Verifikationsplan](docs/TASK_CORE.md).
 
+## Erzählerische Missionsbibliothek (noch nicht spielbar)
+
+Es liegen **800 fiktionale Koop-Missionsentwürfe** vor: 200 je US, USSR, FIA und zivile Einsatzrolle. Die **200 unterschiedlichen Grundhandlungen** wurden in vier Perspektiven mit eigenen benannten Beteiligten, Auftrag, Wendepunkt, zwei Entscheidungswegen und Folgen übertragen.
+
+- [US-Missionskatalog](content/missions/katalog_us.md) / [JSON](content/missions/us.json)
+- [UdSSR-Missionskatalog](content/missions/katalog_ussr.md) / [JSON](content/missions/ussr.json)
+- [FIA-Missionskatalog](content/missions/katalog_fia.md) / [JSON](content/missions/fia.json)
+- [Ziviler Missionskatalog](content/missions/katalog_civ.md) / [JSON](content/missions/civ.json)
+
+Der [Umfang, die Grenzen und die Validierung](docs/MISSIONSBIBLIOTHEK.md) sind dokumentiert. **Keiner der 800 Story-Datensätze besitzt eine fertige Engine-Bridge oder garantierte Spielbarkeit.**
+
 ## Entwicklung und Test
 
 Die Workbench-Projektdateien, Prefabs und Szenario-Welt müssen mit der tatsächlich installierten Arma-Reforger-Tools-Version angelegt und validiert werden. Keine `.ent`- oder `.conf`-Datei wird als funktionsfähig ausgegeben, solange sie nicht in dieser Umgebung erzeugt und geladen wurde.

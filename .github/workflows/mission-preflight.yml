@@ -1,8 +1,9 @@
-name: Mission manifest and task policy preflight
+name: DOF content and task policy checks
 
 on:
   pull_request:
     paths:
+      - "content/**"
       - "scenarios/**"
       - "Scripts/Game/DOF/Core/**"
       - "tools/**"
@@ -11,6 +12,7 @@ on:
   push:
     branches: [main]
     paths:
+      - "content/**"
       - "scenarios/**"
       - "Scripts/Game/DOF/Core/**"
       - "tools/**"
@@ -25,9 +27,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate DOF reference mission manifest (Python, not Workbench)
+      - name: Validate original DOF reference mission (Python only)
         run: python3 tools/validate_mission_manifest.py scenarios/reference_arland/mission.json
-      - name: Run manifest and task reference policy tests (Python, not Enforce)
+      - name: Validate 800 narrative design missions (Python only)
+        run: python3 tools/validate_mission_library.py content/missions
+      - name: Unit tests for design content and reference task policy (Python only)
         run: python3 -m unittest discover -s tests -v
       - name: Simulate reference task chain (Python only)
         run: python3 tools/simulate_reference_mission.py scenarios/reference_arland/mission.json
