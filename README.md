@@ -41,6 +41,10 @@ Siehe [Entwicklungsplan](docs/IMPLEMENTIERUNGSPLAN.md), [Architektur](docs/ARCHI
 
 Der erste Einsatz ist als [deklaratives Design-Manifest](scenarios/reference_arland/mission.json) mit den Phasen Annäherung, Säuberung und Verteidigung definiert. Das Manifest ist **kein Enfusion-Ressourcenformat**. Es wird über einen [Python-Preflight](docs/MISSIONSFORMAT.md) und GitHub Actions formal geprüft und muss anschließend manuell in Enfusion Workbench als echte Szenariowelt umgesetzt und getestet werden.
 
+## Auftragskern (Entwicklungsstand)
+
+Unter `Scripts/Game/DOF/Core/` liegt jetzt ein **noch nicht in Workbench kompilierter** Enforce-Kandidat für den eigenständigen Auftragslebenszyklus. Ein separates Python-Referenzmodell prüft die geplante Ablaufpolitik und simuliert die drei Aufträge der Referenzmission. **Diese Tests sind kein Nachweis für Reforger-Kompatibilität.** Details: [Auftragskern und Verifikationsplan](docs/TASK_CORE.md).
+
 ## Entwicklung und Test
 
 Die Workbench-Projektdateien, Prefabs und Szenario-Welt müssen mit der tatsächlich installierten Arma-Reforger-Tools-Version angelegt und validiert werden. Keine `.ent`- oder `.conf`-Datei wird als funktionsfähig ausgegeben, solange sie nicht in dieser Umgebung erzeugt und geladen wurde.

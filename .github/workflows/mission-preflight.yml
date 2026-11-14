@@ -1,17 +1,19 @@
-name: Mission manifest preflight
+name: Mission manifest and task policy preflight
 
 on:
   pull_request:
     paths:
       - "scenarios/**"
-      - "tools/validate_mission_manifest.py"
+      - "Scripts/Game/DOF/Core/**"
+      - "tools/**"
       - "tests/**"
       - ".github/workflows/mission-preflight.yml"
   push:
     branches: [main]
     paths:
       - "scenarios/**"
-      - "tools/validate_mission_manifest.py"
+      - "Scripts/Game/DOF/Core/**"
+      - "tools/**"
       - "tests/**"
       - ".github/workflows/mission-preflight.yml"
 
@@ -23,7 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate DOF reference mission manifest
+      - name: Validate DOF reference mission manifest (Python, not Workbench)
         run: python3 tools/validate_mission_manifest.py scenarios/reference_arland/mission.json
-      - name: Run manifest validation tests
+      - name: Run manifest and task reference policy tests (Python, not Enforce)
         run: python3 -m unittest discover -s tests -v
+      - name: Simulate reference task chain (Python only)
+        run: python3 tools/simulate_reference_mission.py scenarios/reference_arland/mission.json
