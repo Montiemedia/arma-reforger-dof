@@ -22,7 +22,7 @@ DOF ist ein geplantes modulares Framework für dynamische, serverautoritär verw
 | Reforger-Version | Noch zu ermitteln |
 | Zielsystem | PC / Enfusion Workbench, vorbehaltlich Bestätigung |
 | Server | Listen- und Dedicated Server |
-| Missionsbasis | Noch offen; Game Master und Scenario Framework evaluieren |
+| Missionsbasis | Scenario Framework für 0.1-Referenztest; Game-Master-Integration separat und noch ungeprüft |
 | Karte | Referenzkarte für Tests noch festzulegen; Kern soll kartenunabhängig sein |
 | Fraktionen | Vanilla zum Testen; weitere Fraktionen optional |
 | Pflichtmods | Keine außer Reforger-Basisinhalten im Kern geplant |
@@ -35,7 +35,7 @@ DOF ist ein geplantes modulares Framework für dynamische, serverautoritär verw
 4. **0.4 – Dynamik:** KI-/Ressourcenbudget, Verstärkungen, Ereignisse und Auftragsverkettung.
 5. **0.5 – Multiplayer-Abnahme:** Lasttests, Join-in-Progress, Fehlertoleranz und Bereinigung.
 
-Siehe [Entwicklungsplan](docs/IMPLEMENTIERUNGSPLAN.md), [Architektur](docs/ARCHITEKTUR.md) und [Testplan](docs/TESTPLAN.md).
+Siehe [Entwicklungsplan](docs/IMPLEMENTIERUNGSPLAN.md), [Architektur](docs/ARCHITEKTUR.md), [API-Verifikation](docs/API_VALIDIERUNG.md), [Workbench-Anleitung für DOF 0.1](docs/WORKBENCH_SZENARIO_0_1.md) und [Testplan](docs/TESTPLAN.md).
 
 ## Entwicklung und Test
 
