@@ -83,7 +83,7 @@ def validate_manifest(document):
             by_id[stage_id] = stage
 
         kind = stage.get("task_type")
-        if kind not in TASK_TYPES:
+        if not isinstance(kind, str) or kind not in TASK_TYPES:
             errors.append(f"{place}.task_type must be one of {sorted(TASK_TYPES)}")
         layer = stage.get("editor_layer")
         slot = stage.get("editor_task_slot")
@@ -106,7 +106,7 @@ def validate_manifest(document):
         expected_activation = (
             "on_start" if not dependencies else "on_predecessors_success"
         )
-        if stage.get("activation") not in ACTIVATIONS or stage.get("activation") != expected_activation:
+        if not isinstance(stage.get("activation"), str) or stage.get("activation") != expected_activation:
             errors.append(f"{place}.activation must be {expected_activation}")
 
         if kind in ("clear", "defend"):
