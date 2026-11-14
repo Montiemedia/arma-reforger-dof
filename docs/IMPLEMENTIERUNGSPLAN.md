@@ -21,8 +21,9 @@
 
 ## Phase 2: Zustandsmanager (0.2)
 
-- [ ] Aufträge unabhängig von Engine-Entities modellieren
-- [ ] Zustandsübergänge inklusive Revisionen und Ereignis-IDs
+- [x] Eigenständiges Auftragsmodell ohne Engine-Abhängigkeit als Enforce-Kandidat und Python-Referenz aufgebaut (Workbench-Kompilierung offen)
+- [x] Zustandsübergänge mit Revisionen und Vorbedingungen konzipiert und als Python-Referenz getestet (Workbench-Test offen)
+- [ ] Eindeutige Ereignis-IDs und serverseitige Idempotenz in der RPC-Anbindung ergänzen
 - [ ] Serverseitige Zählung tatsächlich eingesetzter Spieler
 - [ ] Join-in-Progress-Synchronisierung
 
