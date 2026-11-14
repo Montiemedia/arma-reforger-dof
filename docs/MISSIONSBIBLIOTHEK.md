@@ -2,6 +2,10 @@
 
 **Stand: narrative Entwürfe. Keine dieser Missionen ist bisher im Spiel spielbar.**
 
+## Lesbare GitHub-Kataloge
+
+[USA](../content/missions/katalog_us.md) · [UdSSR](../content/missions/katalog_ussr.md) · [FIA](../content/missions/katalog_fia.md) · [Zivile Missionen](../content/missions/katalog_civ.md)
+
 ## Fraktionen und Inhalt
 
 | Katalog | Umfang | Figuren | Konzept |
