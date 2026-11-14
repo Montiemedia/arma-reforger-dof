@@ -1,0 +1,58 @@
+{
+  "format_version": 1,
+  "status": "design_only",
+  "mission_id": "dof_reference_arland",
+  "title": "Operation Brueckenkopf",
+  "engine": "Arma Reforger",
+  "reference_map": "Arland",
+  "integration": "scenario_framework",
+  "factions": {
+    "friendly": "US",
+    "opposing": "USSR"
+  },
+  "limits": {
+    "max_scripted_ai": 12,
+    "allow_repeat_spawns": false
+  },
+  "stages": [
+    {
+      "id": "approach",
+      "task_type": "move",
+      "editor_layer": "LayerTaskMove_Approach",
+      "editor_task_slot": "SlotMoveTo_Approach",
+      "depends_on": [],
+      "activation": "on_start"
+    },
+    {
+      "id": "clear",
+      "task_type": "clear",
+      "editor_layer": "LayerTaskClearArea_Clear",
+      "editor_task_slot": "SlotClearArea_Objective",
+      "depends_on": [
+        "approach"
+      ],
+      "activation": "on_predecessors_success",
+      "enemy_slots": [
+        "SlotAI_Clear_01",
+        "SlotAI_Clear_02",
+        "SlotAI_Clear_03"
+      ]
+    },
+    {
+      "id": "defend",
+      "task_type": "defend",
+      "editor_layer": "LayerTaskDefend_Hold",
+      "editor_task_slot": "SlotDefend_Hold",
+      "depends_on": [
+        "clear"
+      ],
+      "activation": "on_predecessors_success",
+      "enemy_slots": [
+        "SlotAI_QRF_01",
+        "SlotAI_QRF_02"
+      ],
+      "hold_seconds": 60,
+      "min_defender_ratio": 0.51
+    }
+  ]
+}
