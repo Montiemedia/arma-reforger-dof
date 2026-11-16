@@ -1,8 +1,8 @@
 # Workbench addon root
 
-**This is not an addon yet.** Use Enfusion Workbench Launcher → **Create New** with project name `DOF_DynamicOperations` and **location set to this `addon/` directory**.
+**A native Workbench project has now been created.** The authentic `addon/DOF_DynamicOperations/addon.gproj` was imported from the user's ZIP (16 November 2026). It is **not yet a playable addon** because scenario world and mission header do not exist.
 
-The Workbench-generated addon is expected at `addon/DOF_DynamicOperations/` and must supply its own `addon.gproj`, `worlds/**/*.ent`, `Missions/**/*.conf` and corresponding resource `.meta` files.
+The uploaded local project lives at `D:/ArmaReforgerMods/DOF_DynamicOperations/`. Preserve its GUID and transfer **Workbench-generated** `worlds/**/*.ent`, `Missions/**/*.conf`, and respective resource `.meta` files here as they become available. Do not recreate the project just to change its folder.
 
 Do not copy the uncompiled `Scripts/Game/DOF/Core` candidates into the addon until an actual compiler verification has been recorded.
 
