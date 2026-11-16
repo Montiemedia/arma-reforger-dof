@@ -16,3 +16,7 @@ Thumbs.db
 *.secret
 
 # IMPORTANT: do not blanket-ignore Enfusion .meta files.
+
+# Workbench-generated resource database: recreated locally
+resourceDatabase.rdb
+

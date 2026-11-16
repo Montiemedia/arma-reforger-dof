@@ -1,0 +1,8 @@
+GameProject {
+ ID "DOFDynamicOperations"
+ GUID "6AE0B437A941DD95"
+ TITLE "DOF_DynamicOperations"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
