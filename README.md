@@ -23,7 +23,7 @@ DOF ist ein geplantes modulares Framework für dynamische, serverautoritär verw
 | Zielsystem | PC / Enfusion Workbench, vorbehaltlich Bestätigung |
 | Server | Listen- und Dedicated Server |
 | Missionsbasis | Scenario Framework für 0.1-Referenztest; Game-Master-Integration separat und noch ungeprüft |
-| Karte | Referenzkarte für Tests noch festzulegen; Kern soll kartenunabhängig sein |
+| Karte | Arland-Subscene als Referenz vorhanden; alle anderen Karten noch offen |
 | Fraktionen | Vanilla zum Testen; weitere Fraktionen optional |
 | Pflichtmods | Keine außer Reforger-Basisinhalten im Kern geplant |
 
@@ -58,7 +58,7 @@ Der [Umfang, die Grenzen und die Validierung](docs/MISSIONSBIBLIOTHEK.md) sind d
 
 ## Mod-Veröffentlichung: Was ist zum Spielen noch nötig?
 
-**Noch kein installierbarer Reforger-Mod vorhanden.** Die 800 Missionen sind narrative JSON-Entwürfe, und der Enforce-Kern ist nicht in Workbench kompiliert. Die echte `addon.gproj` wurde vom Nutzer mit Workbench erzeugt und liegt unter `addon/DOF_DynamicOperations/`. Eine `.ent`-Szenariowelt und ein Mission Header fehlen weiterhin.
+**Noch kein installierbarer Reforger-Mod vorhanden.** Die 800 Missionen sind narrative JSON-Entwürfe, und der Enforce-Kern ist nicht in Workbench kompiliert. Die echte `addon.gproj` wurde vom Nutzer mit Workbench erzeugt und liegt unter `addon/DOF_DynamicOperations/`. Die originale Arland-Subscene `worlds/DOF_Arland/DOF_Arland.ent` samt `.meta` und noch leerem `default.layer` wurde ebenfalls aus der zweiten Workbench-ZIP übernommen. **Game-Mode-Entities, Mission Header und Spielinhalt fehlen weiterhin.**
 
 Die genaue Anleitung für eine **spielbare Vanilla-Alpha** mit Workbench-Schritten, Tests, Workshop-Publishing und Release-Freigabe befindet sich unter [MOD_ALPHABUILD.md](docs/MOD_ALPHABUILD.md). Der vorgesehene Workbench-Projektordner ist `addon/DOF_DynamicOperations/`.
 
