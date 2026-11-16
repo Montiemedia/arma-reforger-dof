@@ -58,7 +58,7 @@ Der [Umfang, die Grenzen und die Validierung](docs/MISSIONSBIBLIOTHEK.md) sind d
 
 ## Mod-Veröffentlichung: Was ist zum Spielen noch nötig?
 
-**Noch kein installierbarer Reforger-Mod vorhanden.** Die 800 Missionen sind narrative JSON-Entwürfe, und der Enforce-Kern ist nicht in Workbench kompiliert. Native `.gproj`-, `.ent`- und Mission-Header-Ressourcen wurden bisher nicht erzeugt.
+**Noch kein installierbarer Reforger-Mod vorhanden.** Die 800 Missionen sind narrative JSON-Entwürfe, und der Enforce-Kern ist nicht in Workbench kompiliert. Die echte `addon.gproj` wurde vom Nutzer mit Workbench erzeugt und liegt unter `addon/DOF_DynamicOperations/`. Eine `.ent`-Szenariowelt und ein Mission Header fehlen weiterhin.
 
 Die genaue Anleitung für eine **spielbare Vanilla-Alpha** mit Workbench-Schritten, Tests, Workshop-Publishing und Release-Freigabe befindet sich unter [MOD_ALPHABUILD.md](docs/MOD_ALPHABUILD.md). Der vorgesehene Workbench-Projektordner ist `addon/DOF_DynamicOperations/`.
 
