@@ -1,6 +1,6 @@
 # DOF – vom GitHub-Entwurf zum installierbaren Arma-Reforger-Mod
 
-**Aktueller Status (14.11.2026): Nicht installierbar, nicht spielbar.** Die Missionsbibliothek ist JSON-Erzählmaterial. Der vorhandene Enforce-Code ist nicht in einer echten Workbench kompiliert oder eingebunden. GitHub Actions testet bislang nur Python. Dieses Dokument ist eine **konkrete Build-/Releaseanleitung**, kein Nachweis eines Mods.
+**Aktueller Stand (16.11.2026): Projektdatei angelegt, weiterhin nicht installierbar und nicht spielbar.** Die Missionsbibliothek ist JSON-Erzählmaterial. Der vorhandene Enforce-Code ist nicht in einer echten Workbench kompiliert oder eingebunden. GitHub Actions testet bislang nur Python. Dieses Dokument ist eine **konkrete Build-/Releaseanleitung**, kein Nachweis eines Mods.
 
 ## Release-Ziel: DOF v0.1 Playable Alpha
 
@@ -13,7 +13,7 @@ Keine anderen Pflichtmods, keine Behauptung von 800 spielbaren Missionen, keine 
 1. **Arma Reforger** und **Arma Reforger Tools** über Steam installieren. Beide müssen derselben stabilen Spiel-/Tools-Generation entsprechen (Experimental nur als bewusst getrennte Umgebung).
 2. In der **Enfusion Workbench Launcher**-Projektauswahl bei Bedarf das Basisprojekt `<Reforger installation>/addons/data/ArmaReforger.gproj` über **Add Existing** registrieren.
 3. Dieses GitHub-Repository lokal klonen (z. B. außerhalb von OneDrive und `Program Files`).
-4. Im Workbench Launcher **Create New**, Projektname `DOF_DynamicOperations`, Ablageort **`<GitHub-Checkout>/addon`**, Standard-Abhängigkeit **Arma Reforger**, keine weiteren Pflicht-Add-ons. So legt Workbench in unserem geplanten Projektverzeichnis sein echtes `addon.gproj` an.
+4. **Erledigt:** Nutzer hat mit dem Workbench Launcher ein Projekt `DOF_DynamicOperations` unter `D:/ArmaReforgerMods` erstellt. Das reale `addon.gproj` aus der hochgeladenen ZIP-Datei wurde unverändert unter `addon/DOF_DynamicOperations/addon.gproj` versioniert. Die auf dem PC vorhandene Projektdatei **beibehalten und keinesfalls ein neues Projekt mit anderer GUID anlegen**. Die lokale Datei und die GitHub-Version sind derselbe Projektursprung.
 5. In der Workbench den World Editor starten und **Arland** laden. **File → New World → Sub-scene (of current world)**; als `worlds/DOF_Arland/DOF_Arland.ent` im Workbench-Add-on speichern.
 6. **Plugins → Game Mode Setup** mit **`ScenarioFramework.conf`** öffnen; **Create entities** und **Create header** benutzen, sodass die für das Szenario notwendigen Runtime-Entities und die echte Missionskonfiguration unter `Missions/` angelegt werden.
 7. Die drei Aufträge, den Spieler-Spawn sowie den kontrollierten KI-Ansatz **in Workbench** gemäß [WORKBENCH_SZENARIO_0_1.md](WORKBENCH_SZENARIO_0_1.md) anlegen.
@@ -22,7 +22,7 @@ Keine anderen Pflichtmods, keine Behauptung von 800 spielbaren Missionen, keine 
 10. Einen Listen-Server mit mindestens zwei Spielern und anschließend einen Dedicated Server **tatsächlich** testen, einschließlich Join-in-Progress und Missionsabschluss. Verwendete Versionen, Mods, Logs und Fehler protokollieren.
 11. Von Workbench erzeugtes **`.gproj`, `.ent`, zugehöriges `.meta`, Mission-Header-`.conf` und zugehöriges `.meta`** in GitHub committen. **Keine** erfundenen Resource-GUIDs oder händisch erfundenen Engine-Dateien verwenden.
 
-Der **erste nachprüfbare technische Blocker** ist Schritt 4: Noch existiert im Repository keine echte von Workbench erzeugte `.gproj`-Projektdatei.
+Der erste Blocker (Projektanlage) ist abgeschlossen: `addon.gproj` liegt real vor. **Aktueller Blocker:** Eine von Workbench gespeicherte Arland-Subscene (`.ent` + `.meta`) sowie ein echter Mission Header (`.conf` + `.meta`) fehlen. Nach jedem Editor-Schritt die neuen Dateien aus `D:/ArmaReforgerMods/DOF_DynamicOperations/` erneut als ZIP übermitteln oder kontrolliert ins GitHub-Checkout synchronisieren.
 
 ## Release-Preflight (nur Dateien und dokumentierte Testresultate)
 
@@ -56,7 +56,7 @@ Bohemia empfiehlt für öffentliche Server `fastValidation: true` und begrenzte 
 - Die 800 Story-JSONs werden nicht von Reforger als Missionen geladen.
 - Der bisherige DOF Task Director hat noch keine validierte Engine-Bridge und keinen vertrauenswürdigen RPC-Transport.
 - Das bestehende Game-Master- und Scenario-Framework-Game-Mode-Prefab darf nicht als zwei unabhängige Game Modes in einer Welt platziert werden.
-- `addon.gproj`, Asset-GUIDs, Mission Header, Bundles und die Workshop-ID können nicht verantwortbar aus Fantasiewerten erstellt werden.
+- Die reale `addon.gproj` ist bereits vorhanden. **Weitere** Asset-GUIDs, Mission Header, Bundles und die Workshop-ID dürfen nicht aus Fantasiewerten erstellt werden.
 
 ## Offizielle Quellen
 
