@@ -35,6 +35,13 @@ RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Systems/Radio/Radio
  coords 1891.659 11.839 1825.161
 }
 SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramework/GameModeSF.et" {
+ components {
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_AutoSpawnLogic "{5D36888CC966608A}" {
+    m_sForcedFaction "US"
+   }
+  }
+ }
  coords 1891.659 11.326 1821.161
 }
 ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
